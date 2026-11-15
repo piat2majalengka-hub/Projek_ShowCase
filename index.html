@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase Projek Siswa — CSS & JavaScript (Native)</title>
+  <link rel="stylesheet" href="src/theme.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Showcase Karya Siswa</h1>
+      <p>Kumpulan projek aplikasi web berbasis HTML, CSS, dan JavaScript Native</p>
+      
+      <div class="toolbar">
+        <input 
+          type="search" 
+          id="search-input" 
+          placeholder="Cari nama siswa..." 
+          aria-label="Cari nama siswa"
+        >
+        <div class="toolbar-meta">
+          <span id="project-count" class="badge">Memuat...</span>
+          <button id="refresh-btn" class="btn btn-outline" title="Muat ulang daftar terbaru dari GitHub">
+            ↻ Segarkan
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="status-box" class="status-box">Memuat daftar projek dari GitHub...</div>
+    <section id="project-grid" class="project-grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Modal Live Preview -->
+  <div id="preview-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h2 id="modal-title">Pratinjau Projek</h2>
+        <div class="modal-actions">
+          <a id="modal-external-link" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+            Buka di Tab Baru ↗
+          </a>
+          <button id="close-modal-btn" class="btn btn-outline btn-sm" aria-label="Tutup pratinjau">
+            ✕ Tutup
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe id="preview-frame" title="Pratinjau Aplikasi Siswa" src="about:blank"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
