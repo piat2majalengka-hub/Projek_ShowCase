@@ -3,7 +3,7 @@
 // =========================================================================
 const CONFIG = {
   username: 'piat2majalengka-hub', // Contoh: 'ilhamapriansyah'
-  repo: 'Archive_2025-2026', 'Archive_2026-2027',     // Contoh: 'projek-web-siswa'
+  repo: 'Archive_2025-2026',     // Contoh: 'projek-web-siswa'
   branch: 'main',                   // Gunakan 'main' atau 'master'
   ignoreFolders: ['.github', 'assets', 'img', 'images', 'css', 'js']
 };
